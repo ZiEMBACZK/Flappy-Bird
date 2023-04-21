@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d23fa38545d2374ea4fa71122bbab04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 1000
+  force: 4
   jumpDelay: 0.1
   jumpTimer: 0
 --- !u!1001 &5338319694876458302
@@ -270,6 +270,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2392166765876146611, guid: a3ddb33ce84e3df428cb07cd99ff9d74, type: 3}
     - target: {fileID: 4052317904081862716, guid: c85b6a4d7d5d96c409ca93936cbf2ea1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052317904081862716, guid: c85b6a4d7d5d96c409ca93936cbf2ea1, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 86771415}
@@ -279,7 +283,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4052317904081862716, guid: c85b6a4d7d5d96c409ca93936cbf2ea1, type: 3}
       propertyPath: spawnPoint.y
-      value: -4.3685
+      value: -5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052317904081862716, guid: c85b6a4d7d5d96c409ca93936cbf2ea1, type: 3}
+      propertyPath: timeBetweenSpawns
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5338319696219107264, guid: c85b6a4d7d5d96c409ca93936cbf2ea1, type: 3}
       propertyPath: m_RootOrder
@@ -327,7 +335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5338319696219107265, guid: c85b6a4d7d5d96c409ca93936cbf2ea1, type: 3}
       propertyPath: m_Constraints
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5338319696219107266, guid: c85b6a4d7d5d96c409ca93936cbf2ea1, type: 3}
       propertyPath: m_Name

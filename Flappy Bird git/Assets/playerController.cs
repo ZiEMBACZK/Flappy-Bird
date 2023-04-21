@@ -8,7 +8,7 @@ public class playerController : MonoBehaviour
     public float force;
     public float jumpDelay;
     public float jumpTimer;
-    private bool space;
+    private bool shouldFlap;
     float currentY;
     float previusY;
     // Start is called before the first frame update
@@ -28,17 +28,20 @@ public class playerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        
+        if(shouldFlap)
+        {
+            rb.velocity= Vector2.zero;
+            rb.AddForce(new Vector2(0, force), ForceMode2D.Impulse);
+            jumpTimer = 0;
+            shouldFlap= false;
+        }
     }
 
     void Movement()
     {
         if(Input.GetKeyDown(KeyCode.Space) && jumpTimer >= jumpDelay)
         {
-            Debug.Log("DUPA");
-            rb.AddForce(Vector2.up * force * Time.deltaTime, ForceMode2D.Impulse);
-            previusY= transform.position.y;
-            jumpTimer = 0;
+            shouldFlap= true;
         }
     } 
     private void RotateBird()
